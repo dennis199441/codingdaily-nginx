@@ -1,0 +1,19 @@
+version: "3.1"
+
+networks:
+  codingdaily_net:
+
+services:
+  app:
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    image: codingdaily-nginx:0.1.0
+    volumes:
+      - ~/home/azureuser/ssl:/ssl
+    restart: always
+    networks:
+      - codingdaily_net
+    ports:
+      - "80:80"
+      - "443:443"
