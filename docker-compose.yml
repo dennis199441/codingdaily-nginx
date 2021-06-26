@@ -10,7 +10,7 @@ services:
       context: ./
     image: dennis199441/codingdaily-nginx:latest    
     volumes:
-      - /etc/letsencrypt/archive/codingdaily.dev:/ssl
+      - ./ssl/codingdaily.dev:/ssl
     restart: always
     networks:
       - codingdaily_net
