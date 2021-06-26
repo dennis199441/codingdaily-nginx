@@ -8,9 +8,9 @@ services:
     build:
       dockerfile: Dockerfile
       context: ./
-    image: codingdaily-nginx:0.1.0
+    image: dennis199441/codingdaily-nginx:latest
     volumes:
-      - ~/home/azureuser/ssl:/ssl
+      - /etc/letsencrypt/live/codingdaily.dev:/ssl
     restart: always
     networks:
       - codingdaily_net
