@@ -10,7 +10,7 @@ services:
       context: ./
     image: dennis199441/codingdaily-nginx:latest
     volumes:
-      - ./ssl:/ssl
+      - ./ssl/:/ssl
     restart: always
     networks:
       - codingdaily_net
